@@ -1,0 +1,267 @@
+1.b)Brother
+
+2.a)Father
+
+3.c)Sister
+
+4.c)Father
+
+5.b)Son
+
+6.c)
+
+7.b)
+
+8.b)
+
+9.a)
+
+10.d)
+
+11.b)
+
+12.b)north
+
+13.c)
+
+14.d)
+
+
+Theory Questions
+
+1)Constructor is block of code which will executed whenever object is created.
+	constructor is a special method that is used to initialize objects.
+	Constructor name should same as class name and which cannot have return type.
+	Ex: public class Main {
+          int x;  
+		public Main() {                       
+		  x=2;
+		public static void main(String[] args) {
+			Main value = new Main();
+		System.out.println(value.x);
+		}
+	} 
+	        In the above code we create class constructor for main class then initialize value for attribute x
+			  then crete object of main class then print the value using println.
+
+2)There are 3 types of Constructor
+	1.Default constructor->if there is no constructor there is always default constructor present.
+	2.Args/Parameterized Constructor->Accepts parameters and we can initialize instance variable.
+	3.No-Args Constructor->this is the constructor doesn’t accepts any parameters.
+	
+3)Object-> It is instance of class which has states and behaviours.
+			Inside the class object is created.
+			 to crete a object we use new keyword.
+			Ex: public class main()
+					int x = 6;
+				public static void main(String[] args) {
+				Main value = new Main();
+				System.out.println(value.x);
+				}
+			}
+		
+4)Class-> It is the blueprint or form which create objects.
+			-To create a class we have to use class keyword.
+			ex: public class Car {
+					int noOfClutch = 5;
+				}
+				
+5)Method Overloading->It is block of code where multiple methods can have same name but has different parameters.
+					We can also called Run Time Polymorphism.
+					The method has same name as class.
+					
+					Different Ways- Change the order of parameters
+									Change the datatype of parameters
+									Change the length of parameters.
+					
+
+
+6)Variables->It is container which store some values.
+			 There are different types of variables.
+			    -String->store text in "abc"
+				-int- numbers
+				-char- @, #
+				-double- 23.2356d
+				-short-4578
+				-long-8722913592L
+				-byte-2345
+				-boolean-True or False
+				-float-2.3f
+
+7)this keyword->We can use this to create new keyword or to refer current class instance variable.
+
+8)String-> String is immutable.
+			-string value can be written in ""
+			-inside string class has fields,methods,constructor.
+			Ex: String "Hello";
+		
+9)5 Methods of String class
+Ex: String txt = "Amruta";
+	1)toUpperCase();
+          System.out.println(txt.toUpperCase());   o/p-AMRUTA
+	2)toLowerCase():
+          System.out.println(txt.toLowerCase());    o/p-amruta
+	3)endsWith();
+		  System.out.println(txt.endsWith());   o/p-ta
+	4)startsWith();
+		System.out.println(txt.startsWith());   o/p-Am
+	5)charAt();
+		System.out.println(txt.charAt(3));      o/p-u
+
+10)String is immutable because it cannot change the value.
+	-Here the value is fixed.
+	
+Prpgramming Questions-
+
+1)Create a class and achive constructor chaining
+ public class Person {
+    private String name;
+    private int age;
+
+    public Person() {
+		this("Amruta", 23);
+    }
+
+    public Person(String name) {
+        this(name, 23);
+    }
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public static void main(String[] args) {
+        Person person1 = new Person();
+        System.out.println("Name: " + person1.getName() + ", Age: " + person1.getAge());
+    }
+}
+
+2)Create class and objects and initialize the value using constructor
+
+	public class Rectangle {
+    private int width;
+    private int height;
+
+    public Rectangle(int width, int height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public static void main(String[] args) {
+        Rectangle rectangle = new Rectangle(10, 20);
+        System.out.println("Width: " + rectangle.getWidth());
+        System.out.println("Height: " + rectangle.getHeight());
+    }
+}
+
+3)Create blueprint for these abject(Fish,Camera,Headphones)
+
+Fish-
+public class Fish {
+    private String species;
+    private int age;
+
+    public Fish(String species, int age) {
+        this.species = species;
+        this.age = age;
+    }
+
+    public String getSpecies() {
+        return species;
+    }
+
+    public int getAge() {
+        return age;
+    }
+}
+
+Camera-
+public class Camera {
+    private String brand;
+    private int megapixels;
+
+    public Camera(String brand, int megapixels) {
+        this.brand = brand;
+        this.megapixels = megapixels;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public int getMegapixels() {
+        return megapixels;
+    }
+}
+
+Headphones-
+public class Headphones {
+    private String brand;
+    private String model;
+
+    public Headphones(String brand, String model) {
+        this.brand = brand;
+        this.model = model;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public String getModel() {
+        return model;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Fish fish = new Fish("Goldfish", 2);
+        System.out.println("Fish Species: " + fish.getSpecies());
+        System.out.println("Fish Age: " + fish.getAge());
+
+        Camera camera = new Camera("Canon", 24);
+        System.out.println("Camera Brand: " + camera.getBrand());
+        System.out.println("Camera Megapixels: " + camera.getMegapixels());
+
+        Headphones headphones = new Headphones("Sony", "WH-1XM4");
+        System.out.println("Headphones Brand: " + headphones.getBrand());
+        System.out.println("Headphones Model: " + headphones.getModel());
+    }
+}
+
+4)Create a for loop and print all the values in reverse order.
+
+	public class Reverse {
+    public static void main(String[] args) {
+        int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+
+        System.out.println("\nReverse order:");
+        for (int i = numbers.length - 1; i >= 0; i--) {
+            System.out.print(numbers[i] + " ");
+        }
+    }
+}
+
+
+		
+
+
+
+
